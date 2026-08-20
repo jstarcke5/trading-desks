@@ -7,7 +7,8 @@ The safety here does not come from telling the agents to be careful. It comes fr
 > An idea disproven costs one conversation. An idea believed costs the position.
 
 > [!WARNING]
-> **This software places real orders with real money and can lose all of it.** Nothing here is
+> **This software places real orders with real money and can lose all of it — and it has never
+> been run live.** No order in this repository's history has ever reached a broker. Nothing here is
 > investment advice or a promise of returns. The values in `guardrail/limits.json` are
 > illustrative examples, not recommendations — they are not tuned for your account and using
 > them unchanged is not safe. See [LICENSE](LICENSE) for the full no-warranty and liability
@@ -143,7 +144,30 @@ A system like this that trades often is a system whose safeguards are not workin
 
 ---
 
-## 6. Verified, not asserted
+## 6. What "verified" means here — and what it does not
+
+Read this before you trust anything below it.
+
+**This system has never placed a real order.** Not one. Every result in this repository comes
+from tests, from simulated order paths, and from adversarial runs against real desk
+configurations — never from money changing hands.
+
+That distinction matters more than the test count. An independent audit of this repo found that
+the live order path would have **crashed on its first armed use** — a field-name mismatch
+between two modules that raised a `KeyError` and killed the proxy mid-order. Every simulated run
+passed. The bug was only reachable once a real broker token and the arming file both existed, so
+no amount of testing in safe mode could have surfaced it.
+
+The same audit found five modules the README then described as active which were never imported
+by the running server. Both classes of defect are fixed. Neither would have been found by the
+test suite, because **the tests exercised the modules, not the path.**
+
+So: the architecture is real, the containment properties are genuine and adversarially tested,
+and the reasoning is sound. The *execution path* is unproven in production. Treat it that way.
+
+---
+
+## 6b. Verified, not asserted
 
 267 tests. Every attack below was run live against real configurations, not reasoned about. Full transcripts in [`tests/REDTEAM-RESULTS.md`](tests/REDTEAM-RESULTS.md).
 
