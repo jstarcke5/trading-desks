@@ -1,0 +1,22 @@
+# Generated per-machine by setup.py — contains absolute paths and a deny-list
+# enumerating your home directory. Never commit these.
+desks/*.json
+desks/START-COMMANDS.txt
+
+# Credentials and live state — never commit
+guardrail/.rh-token.json
+guardrail/.rh-client.json
+guardrail/account.json
+guardrail/.armed
+guardrail/state.json
+guardrail/audit.log
+watcher/feed.json
+watcher/signals.jsonl
+watcher/seen.json
+handoffs/
+__pycache__/
+
+# daemon output — created at runtime, must never be committed
+*.log
+watcher/.tmp
+watcher/watcher.log

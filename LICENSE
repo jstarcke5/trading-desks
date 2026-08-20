@@ -1,0 +1,42 @@
+MIT License
+
+Copyright (c) 2026 the contributors to this repository
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+ADDITIONAL NOTICE — FINANCIAL RISK
+
+This software is capable of placing real orders in a real brokerage account
+using real money. It can lose some or all of the funds in any account it is
+connected to.
+
+Nothing in this repository is investment advice, a trading strategy, a
+recommendation, or any promise or projection of returns. The authors are not
+brokers, dealers, or investment advisers.
+
+The default configuration values in guardrail/limits.json are illustrative
+examples, not recommendations. They have not been tuned for your account, your
+risk tolerance, or your jurisdiction, and using them unchanged is not safe.
+
+By connecting a broker and arming this software you accept sole and complete
+responsibility for every order it places and every loss that results. See the
+LIMITATION OF LIABILITY above: it applies in full, including to losses of
+capital.

@@ -1,0 +1,31 @@
+{
+  "_READ_THIS_FIRST": "ILLUSTRATIVE DEFAULTS \u2014 deliberately conservative, NOT tuned for you. Every number below should be replaced before arming. An unexamined limit is not a limit.",
+  "_known_behaviour": "A position is not force-exited automatically: there are no stop orders (a stop is a second, unreviewed order). Protection comes from daily_loss_cap, which sees BOTH realized and unrealized loss, and from exits never being blocked by min_hold when a position is losing. Understand that combination before arming.",
+  "max_order_notional": 20.0,
+  "max_daily_notional": 100.0,
+  "_daily_note": "Churn limit, not a loss limit. Costs, not bad prediction, killed most strategies in the literature this design is built on.",
+  "max_open_exposure": 50.0,
+  "daily_loss_cap": 10.0,
+  "_loss_note": "A FRACTION of the account, not all of it. A cap equal to the balance halts only after the money is gone. Counts realized + unrealized.",
+  "allowlist": [
+    "SPY",
+    "QQQ"
+  ],
+  "_allowlist_note": "Start narrow. An empty list is NOT 'allow everything' \u2014 a missing or empty allowlist fails closed.",
+  "allow_options": false,
+  "allow_market_orders": true,
+  "require_notional_for_market": true,
+  "opening_blackout_minutes": 15,
+  "_blackout_note": "The first minutes carry the widest spreads. 15 is the conservative default.",
+  "min_hold_minutes": 60,
+  "_hold_note": "Anti-churn only. It never blocks the exit of a losing position.",
+  "fee_pct_per_side": 0.03,
+  "_fee_note": "MEASURE this for your own broker and symbols; do not inherit it. A cost figure carried over from unrelated research was once 9x too high here and silently killed every idea at the gate before analysis began.",
+  "session": {
+    "start": "09:30",
+    "end": "16:00",
+    "min_hold_minutes": 60,
+    "flatten_buffer_minutes": 10,
+    "_note": "Entries stop at end minus min_hold so nothing is opened that cannot be closed."
+  }
+}

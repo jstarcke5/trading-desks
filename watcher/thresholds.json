@@ -1,0 +1,21 @@
+{
+  "market_open": "09:30",
+  "market_close": "16:00",
+  "max_bar_age_minutes": 30,
+  "rules": [
+    {
+      "symbol": "SPY",
+      "metric": "vol_20d",
+      "op": "x>",
+      "threshold": 1.5,
+      "baseline": "vol_30d_median"
+    },
+    {
+      "symbol": "QQQ",
+      "metric": "vol_20d",
+      "op": "x>",
+      "threshold": 1.5,
+      "baseline": "vol_30d_median"
+    }
+  ]
+}

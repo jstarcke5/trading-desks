@@ -1,0 +1,14 @@
+{
+  "_note": "Deliberately grants NOTHING over guardrail/, desks/ or limits.json. GOAL.md states those may never be updated by an automated process; a settings file that pre-approves writing them would contradict the repo's own top-stated invariant.",
+  "permissions": {
+    "allow": [],
+    "deny": [
+      "Edit(guardrail/**)",
+      "Write(guardrail/**)",
+      "Edit(desks/**)",
+      "Write(desks/**)",
+      "Edit(GOAL.md)",
+      "Edit(CLAUDE.md)"
+    ]
+  }
+}

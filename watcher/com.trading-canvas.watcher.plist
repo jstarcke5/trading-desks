@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0"><dict>
+  <key>Label</key><string>com.trading-canvas.watcher</string>
+  <key>ProgramArguments</key><array>
+    <string>/usr/bin/python3</string>
+    <string>${CANVAS_HOME}/watcher/watch.py</string>
+    <string>--interval</string><string>300</string>
+  </array>
+  <key>RunAtLoad</key><true/>
+  <key>KeepAlive</key><true/>
+  <key>StandardErrorPath</key><string>${CANVAS_HOME}/watcher/watcher.log</string>
+  <key>StandardOutPath</key><string>${CANVAS_HOME}/watcher/watcher.log</string>
+</dict></plist>
